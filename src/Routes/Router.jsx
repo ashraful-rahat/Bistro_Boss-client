@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
+import Cart from "../Layout/Dashboard/Cart/Cart";
+import DashBoard from "../Layout/Dashboard/DashBoard";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login/Login";
@@ -20,7 +22,7 @@ import SignUp from "../Pages/SignUp/SignUp";
                 element: <Menu></Menu>
             },
             {
-                path:'/order',
+                path:'/order/',
                 element: <Order></Order>
             },
             {
@@ -30,6 +32,17 @@ import SignUp from "../Pages/SignUp/SignUp";
             {
                 path:'/signup',
                 element: <SignUp />
+            },
+        ]
+    },
+
+    {
+        path:'dashboard',
+        element:<DashBoard></DashBoard>,
+        children:[
+            {
+                path:'cart',
+                element:<Cart></Cart>,
             },
         ]
     }
